@@ -10,6 +10,8 @@
  */
 function getOdds(numbers) {
   // Your code here
+  let oddsArr = numbers.filter((n) => n % 2 === 1);
+  return oddsArr;
 }
 
 /**
@@ -24,6 +26,8 @@ function getOdds(numbers) {
  */
 function getEvens(numbers) {
   // Your code here
+  let evensArr = numbers.filter((e) => e % 2 === 0);
+  return evensArr;
 }
 
 /**
@@ -37,6 +41,7 @@ function getEvens(numbers) {
  */
 function countOccurences(x, numbers) {
   // Your code here
+  return numbers.filter((number) => number === x).length;
 }
 
 /**
@@ -50,6 +55,8 @@ function countOccurences(x, numbers) {
 
 function makeThemDoctors(students) {
   // Your code here
+  let drs = students.map((cv) => "Dr. " + cv);
+  return drs;
 }
 
 module.exports = { getOdds, getEvens, countOccurences, makeThemDoctors };
